@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/doraemonbomber_game.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.0.0.js"></script>
+    <script type="text/javascript" src="scripts/doraemonbomber_game.js"></script>
+	<title>DoraemonBomber Game</title>
+</head>
+
+<body ng-controller="myCtrl">
+    <div id="doraemongame_gif" ng-show="doraemongameswitch1"><img src="images/doraemonbomb_game.gif" ng-click="switchdoraemongame(false)"/> 
+        </div>
+        <div id="doraemongame_board" ng-show="doraemongameswitch2" style="background:url(images/background.jpg) no-repeat center">
+            <div id="doraemon" style="background:url(images/down1.png) no-repeat center" value="doraemon"></div>
+            <div id="nobita" style="background:url(images/nobita_down1.png) no-repeat center" value="nobita"></div>
+            <div id="box1" style="background:url(images/box.png) no-repeat center"></div>
+            <div id="bat1" style="background:url(images/bat_down1.png) no-repeat center"></div>
+            <div id="bat2" style="background:url(images/bat_down1.png) no-repeat center"></div>
+            <div id="bat3" style="background:url(images/bat_down1.png) no-repeat center"></div>
+            <button id="doraemongamestartbtn" class="btn btn-info" ng-click="doraemongamestart()">Start Game</button>
+            <button id="quitdoraemongamebtn" class="btn btn-success" ng-click="switchdoraemongame(true)">Quit Game</button>
+        </div>
+</body>
+</html>
